@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using QuanLyTrungTam.Data;
+using QuanLyTrungTam.DAL;
 using QuanLyTrungTam.DAL.Interfaces;
-using QuanLyTrungTam.Models;
+using QuanLyTrungTam.Entities;
 
 namespace QuanLyTrungTam.DAL.Implementations
 {
@@ -601,3 +601,5 @@ namespace QuanLyTrungTam.DAL.Implementations
         }
     }
 }
+
+

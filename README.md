@@ -19,13 +19,12 @@ quanlyhcvien_uyen/
 ├── DAL/
 │   ├── Implementations/
 │   │   └── AppDAL.cs
-│   └── Interfaces/
-│       └── IAppDAL.cs
-├── Data/
+│   ├── Interfaces/
+│   │   └── IAppDAL.cs
 │   └── AppDbContext.cs
 ├── Helpers/
 │   └── SecurityHelper.cs
-├── Models/
+├── Entities/
 │   ├── DangKyHoc.cs
 │   ├── GiangVien.cs
 │   ├── HocVien.cs
@@ -61,7 +60,7 @@ quanlyhcvien_uyen/
 
 ## 📝 Giải thích chi tiết từng phần
 
-### 1. Thư mục `Models/` (Tầng Entity)
+### 1. Thư mục `Entities/` (Tầng Entity)
 - Chứa cấu trúc định nghĩa các bảng trong Cơ sở dữ liệu.
 - Các file trong này chỉ thuần túy khai báo Properties (thuộc tính `get; set;`), Khóa chính (Primary Key), và Mối quan hệ Khóa ngoại (Foreign Key) như `HocVien.cs`, `KhoaHoc.cs`, `DangKyHoc.cs`...
 
@@ -70,8 +69,7 @@ quanlyhcvien_uyen/
 - **`DAL/Interfaces/IAppDAL.cs`**: Chứa toàn bộ các *Khuôn mẫu (Interface)* như `IHocVienDAL`, `IKhoaHocDAL`. Nó quy định DAL phải có các hàm gì (Thêm, Sửa, Xóa, Tìm kiếm).
 - **`DAL/Implementations/AppDAL.cs`**: Code thực thi các Interface trên. Tất cả mọi hàm trong file này đều BẮT BUỘC có cấu trúc: `var conn = GetDbConnection(); try { Mở_Kết_Nối; Xử_Lý_DB; } catch { Bắt_Lỗi; } finally { conn.Close(); Đóng_Kết_Nối; }`.
 
-### 3. Thư mục `Data/`
-- **`AppDbContext.cs`**: Lớp trung tâm cấu hình Entity Framework Core. Nó giúp "ánh xạ" các file trong `Models/` vào CSDL SQLite (`QuanLyTrungTam.db`). Nó cũng chịu trách nhiệm nạp dữ liệu mẫu ban đầu (Seed Data).
+- **`DAL/AppDbContext.cs`**: Lớp trung tâm cấu hình Entity Framework Core. Nó giúp "ánh xạ" các file trong `Entities/` vào CSDL SQLite (`QuanLyTrungTam.db`).
 
 ### 4. Thư mục `Controllers/` (Tầng Logic / API endpoints)
 - Nhận dữ liệu từ giao diện (Frontend), chuyển xuống tầng `DAL` để xử lý, sau đó trả kết quả lại dưới định dạng JSON. Không có lệnh tương tác DB trực tiếp nào ở đây.

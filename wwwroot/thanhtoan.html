@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Toán - English Center</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 <div class="app-layout">
@@ -71,7 +71,7 @@
 </div>
 
 <div class="toast-container" id="toastContainer"></div>
-<script src="js/app.js"></script>
+<script src="js/app.js?v=2"></script>
 <script>
     checkAuth(); renderSidebar('thanhtoan'); setUserInfo();
     
@@ -118,7 +118,7 @@
         if (!d.maHoaDon || !d.maDangKy || !d.soTienThu) { showToast('Nhập đủ thông tin!', 'error'); return; }
         const res = await fetch('/api/ThanhToan', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(d) });
         if (res.ok) { showToast('Thanh toán thành công!', 'success'); hideModal(); loadData(); }
-        else { const r = await res.json(); showToast(r.message, 'error'); }
+        else { const r = await res.json(); showToast(r.message || r.title || 'L?i d? li?u (Ki?m tra l?i � tr?ng)', 'error'); }
     }
 
     async function deleteData(id) {
@@ -131,3 +131,5 @@
 </script>
 </body>
 </html>
+
+

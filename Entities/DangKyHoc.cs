@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuanLyTrungTam.Models
+namespace QuanLyTrungTam.Entities
 {
     /// <summary>
     /// Bảng Đăng Ký Học - Bảng trung gian giữa HocVien và KhoaHoc (Nhiều-Nhiều)
@@ -31,3 +31,4 @@ namespace QuanLyTrungTam.Models
         public ICollection<ThanhToan>? ThanhToans { get; set; }
     }
 }
+

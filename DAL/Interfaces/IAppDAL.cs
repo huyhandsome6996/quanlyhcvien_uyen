@@ -1,4 +1,4 @@
-using QuanLyTrungTam.Models;
+using QuanLyTrungTam.Entities;
 
 namespace QuanLyTrungTam.DAL.Interfaces
 {
@@ -72,3 +72,4 @@ namespace QuanLyTrungTam.DAL.Interfaces
         Task<dynamic> GetThongKeTongHopAsync();
     }
 }
+

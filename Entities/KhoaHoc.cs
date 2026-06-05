@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace QuanLyTrungTam.Models
+namespace QuanLyTrungTam.Entities
 {
     /// <summary>
     /// Bảng Khóa Học - Lưu thông tin các khóa đào tạo
@@ -24,3 +24,4 @@ namespace QuanLyTrungTam.Models
         public ICollection<DangKyHoc>? DangKyHocs { get; set; }
     }
 }
+

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QuanLyTrungTam.DAL.Interfaces;
 using QuanLyTrungTam.Helpers;
-using QuanLyTrungTam.Models;
+using QuanLyTrungTam.Entities;
 
 namespace QuanLyTrungTam.Controllers
 {
@@ -43,3 +43,4 @@ namespace QuanLyTrungTam.Controllers
         }
     }
 }
+

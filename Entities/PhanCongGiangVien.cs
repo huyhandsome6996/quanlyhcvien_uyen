@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuanLyTrungTam.Models
+namespace QuanLyTrungTam.Entities
 {
     /// <summary>
     /// Bảng Phân Công Giảng Viên - Bảng trung gian giữa GiangVien và LopHoc (Nhiều-Nhiều)
@@ -29,3 +29,4 @@ namespace QuanLyTrungTam.Models
         public LopHoc? LopHoc { get; set; }
     }
 }
+

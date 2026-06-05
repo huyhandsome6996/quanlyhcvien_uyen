@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuanLyTrungTam.Models
+namespace QuanLyTrungTam.Entities
 {
     /// <summary>
     /// Bảng Thanh Toán - Lưu thông tin hóa đơn thu tiền
@@ -24,3 +24,4 @@ namespace QuanLyTrungTam.Models
         public DangKyHoc? DangKyHoc { get; set; }
     }
 }
+

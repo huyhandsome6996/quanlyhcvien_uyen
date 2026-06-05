@@ -44,7 +44,7 @@ Tài liệu này chỉ ra **"Chỗ nào, ở đâu"** trong mã nguồn dự án
 
 **2. Kiến trúc 3 Tầng (3-Tier):**
 - **Nơi đáp ứng:**
-  - **Tầng Entity:** Nằm gọn trong thư mục `Models/` (chỉ chứa get/set cơ bản).
+  - **Tầng Entity:** Nằm gọn trong thư mục `Entities/` (chỉ chứa get/set cơ bản).
   - **Tầng DAL:** Nằm trong thư mục `DAL/` (chứa code kết nối SQLite, xử lý thao tác DB thuần túy).
   - **Tầng GUI/Presentation:** Nằm trong thư mục `Controllers/` và `wwwroot/`. Tầng GUI chỉ gọi xuống DAL thông qua Dependency Injection.
 

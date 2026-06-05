@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace QuanLyTrungTam.Models
+namespace QuanLyTrungTam.Entities
 {
     /// <summary>
     /// Bảng Tài Khoản - Lưu thông tin đăng nhập hệ thống
@@ -16,3 +16,4 @@ namespace QuanLyTrungTam.Models
         public string MatKhau { get; set; } = string.Empty;
     }
 }
+
